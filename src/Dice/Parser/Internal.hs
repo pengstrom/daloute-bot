@@ -5,16 +5,10 @@ import           Dice
 import           Text.Megaparsec
 import           Text.Megaparsec.Lexer (decimal)
 
-import           Data.String
-import           Debug.Trace
-
 type Parser = Parsec () String
 
 parseRoll :: String -> Maybe Roll
-parseRoll s =
-  case parse rollParser "" s of
-    Left e  -> trace (show e) Nothing
-    Right r -> Just r
+parseRoll = parseMaybe rollParser
 
 rollParser :: Parser Roll
 rollParser = do

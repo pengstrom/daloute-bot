@@ -30,6 +30,7 @@ spec :: Spec
 spec =
   describe "Parser" $ do
     it "Rejects empty string" $ isNothing $ parseRoll ""
+    it "Rejects only label" $ isNothing $ parseRoll " a label "
     it "Parses integers" $
       property $ \(NonNegative x) ->
         parseRoll (show x) == Just (Roll [Mod x] Nothing)
