@@ -20,6 +20,7 @@ description:         Please see the README on Github at <https://github.com/peng
 
 dependencies:
 - base >= 4.7 && < 5
+- megaparsec
 
 library:
   source-dirs: src

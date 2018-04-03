@@ -2,3 +2,5 @@
 da-loute-bot.cabal
 *~
 .token
+
+*.swp
