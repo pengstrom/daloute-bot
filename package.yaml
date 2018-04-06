@@ -1,6 +1,6 @@
-name:                da-loute-bot
+name:                daloute-bot
 version:             0.1.0.0
-github:              "pengstrom/da-loute-bot"
+github:              "pengstrom/daloute-bot"
 license:             BSD3
 author:              "Per Engström"
 maintainer:          "per.olov.engstrom@gmail.com"
@@ -16,18 +16,20 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on Github at <https://github.com/pengstrom/da-loute-bot#readme>
+description:         Please see the README on Github at <https://github.com/pengstrom/daloute-bot#readme>
 
 dependencies:
 - base >= 4.7 && < 5
 - megaparsec
 - random
+- text
+- telegram-bot-simple
 
 library:
   source-dirs: src
 
 executables:
-  da-loute-bot-exe:
+  daloute-bot:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -35,10 +37,10 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - da-loute-bot
+    - daloute-bot
 
 tests:
-  da-loute-bot-test:
+  daloute-bot-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -47,5 +49,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - hspec
-    - da-loute-bot
+    - daloute-bot
     - QuickCheck

@@ -1,6 +1,8 @@
 .stack-work/
-da-loute-bot.cabal
+daloute-bot.cabal
 *~
 .token
 
 *.swp
+token.txt
+

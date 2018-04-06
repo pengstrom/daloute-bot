@@ -3,7 +3,8 @@ module Dice.Parser.Internal where
 import           Dice
 
 import           Text.Megaparsec
-import           Text.Megaparsec.Lexer (decimal)
+import           Text.Megaparsec.Char
+import           Text.Megaparsec.Char.Lexer (decimal)
 
 type Parser = Parsec () String
 
